@@ -18,7 +18,7 @@ public class App
         System.out.println(Add(num1, num2));
     }
     
-    static double Add(double a, double b) {
+    public static double Add(double a, double b) {
     	return a + b;
     }
 }
