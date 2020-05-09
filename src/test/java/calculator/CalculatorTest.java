@@ -30,4 +30,13 @@ public class CalculatorTest {
 	        double result = calculator.Subtract(a, b);
 	        Assert.assertEquals(expectedResult, result, 0);
 		}
+		
+		@Test
+		public void testMultiply() {
+			double a = 8.0;
+	        double b = 12.0;
+	        double expectedResult = 96.0;
+	        double result = calculator.Multiply(a, b);
+	        Assert.assertEquals(expectedResult, result, 0);
+		}
 }

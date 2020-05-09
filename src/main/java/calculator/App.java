@@ -28,6 +28,7 @@ public class App
                  		break;
                  case 2: System.out.println(num1+" - "+num2+" = "+Subtract(num1, num2));
                  		break;
+                 case 3: System.out.println(num1+" * "+num2+" = "+Multiply(num1, num2));
                 default: System.out.println("Exiting, Bye");
                 flag=1;
                 }
@@ -41,5 +42,8 @@ public class App
     }
     static double Subtract(double a, double b) {
     	return a - b;
+    }
+    static double Multiply(double a, double b) {
+    	return a * b;
     }
 }
