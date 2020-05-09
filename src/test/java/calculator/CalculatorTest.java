@@ -24,9 +24,9 @@ public class CalculatorTest {
 		
 		@Test
 		public void testSubtract() {
-			double a = 15.0;
-	        double b = 12.0;
-	        double expectedResult = 3.0;
+			double a = 34;
+	        double b = 12;
+	        double expectedResult = 22;
 	        double result = calculator.Subtract(a, b);
 	        Assert.assertEquals(expectedResult, result, 0);
 		}
