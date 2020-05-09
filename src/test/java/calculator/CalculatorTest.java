@@ -39,4 +39,20 @@ public class CalculatorTest {
 	        double result = calculator.Multiply(a, b);
 	        Assert.assertEquals(expectedResult, result, 0);
 		}
+		
+		@Test
+		public void testDivide() {
+			double a = 60.0;
+	        double b = 12.0;
+	        double expectedResult = 5.0;
+	        double result = calculator.Divide(a, b);
+	        Assert.assertEquals(expectedResult, result, 0);
+		}
+		
+		@Test(expected = IllegalArgumentException.class)
+	    public void testDivideByZero() {
+	        int a = 25;
+	        int b = 0;
+	        calculator.Divide(a, b);
+	    }
 }

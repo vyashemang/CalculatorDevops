@@ -29,6 +29,9 @@ public class App
                  case 2: System.out.println(num1+" - "+num2+" = "+Subtract(num1, num2));
                  		break;
                  case 3: System.out.println(num1+" * "+num2+" = "+Multiply(num1, num2));
+                 		break;
+                 case 4: System.out.println(num1+" / "+num2+" = "+Divide(num1, num2));
+                		break;
                 default: System.out.println("Exiting, Bye");
                 flag=1;
                 }
@@ -45,5 +48,11 @@ public class App
     }
     static double Multiply(double a, double b) {
     	return a * b;
+    }
+    static double Divide(double a, double b) {
+    	if (b == 0) {
+    		throw new IllegalArgumentException("Divisor cannot be zero, Exiting");
+    	}
+    	else return a / b;
     }
 }
