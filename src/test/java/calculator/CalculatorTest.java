@@ -33,9 +33,9 @@ public class CalculatorTest {
 		
 		@Test
 		public void testMultiply() {
-			double a = 8.0;
-	        double b = 12.0;
-	        double expectedResult = 96.0;
+			double a = 18.5;
+	        double b = 12.6;
+	        double expectedResult = 233.1;
 	        double result = calculator.Multiply(a, b);
 	        Assert.assertEquals(expectedResult, result, 0);
 		}
