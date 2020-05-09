@@ -1,24 +1,45 @@
 package calculator;
-
-import java.util.Scanner;
-
-/**
- * Hello world!
- *
- */
-public class App 
+import java.util.*;
+public class App
 {
-    public static void main( String[] args )
+    public static void main(String args[])
     {
-        System.out.println( "Calculator Program");
+        int choice, flag=0;
+        double num1,num2;
         Scanner scan = new Scanner(System.in);
-        double num1, num2;
-        num1 = scan.nextDouble();
-        num2 = scan.nextDouble();
-        System.out.println(Add(num1, num2));
+        System.out.println("Calculator");
+        do {
+            System.out.println("1 for Addition\n2 for Subtraction\n3 for Multiplication\n4 for Division\n");
+            System.out.print("Enter your choice: ");
+            choice = scan.nextInt();
+            if (choice > 4 || choice <1) {
+                flag = 1;
+                System.out.println("Invalid choice, exiting\n");
+            }
+            else if (flag != 1){
+            	 System.out.println("Enter two numbers");
+                 System.out.print("Enter number 1: ");
+                 num1 = scan.nextDouble();
+                 System.out.print("Enter number 2: ");
+                 num2 = scan.nextDouble();
+                 
+                 switch(choice) {
+                 case 1: System.out.println(num1+" + "+num2+" = "+Add(num1, num2));
+                 		break;
+                 case 2: System.out.println(num1+" - "+num2+" = "+Subtract(num1, num2));
+                 		break;
+                default: System.out.println("Exiting, Bye");
+                flag=1;
+                }
+            }
+            System.out.println("\n");
+            }while(flag==0);
     }
     
-    public static double Add(double a, double b) {
+    static double Add(double a, double b) {
     	return a + b;
+    }
+    static double Subtract(double a, double b) {
+    	return a - b;
     }
 }
