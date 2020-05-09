@@ -46,7 +46,7 @@ public class CalculatorTest {
 	        double b = 12.0;
 	        double expectedResult = 5.0;
 	        double result = calculator.Divide(a, b);
-	        Assert.assertEquals(expectedResult, result, 0);
+	        Assert.assertEquals(expectedResult, result, 0.0001);
 		}
 		
 		@Test(expected = IllegalArgumentException.class)
